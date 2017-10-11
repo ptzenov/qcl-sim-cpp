@@ -9,6 +9,8 @@
 *.tar 
 *.gz
 
+QCLSIM
+
 *.o
 *.swp
 *.swo
