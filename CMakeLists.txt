@@ -1,19 +1,24 @@
-cmake_minimum_required(VERSION 2.8) 
+cmake_minimum_required(VERSION 3.0) 
 project(QCLSIM)
  
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11")
 set(CMAKE_CXX "g++")
 
+
+find_package(Matlab REQUIRED)
+
+
+
 #Bring the headers, such as Student.h into the project
 include_directories(
 	include
-	"/mnt/SHARED/Matlab_Linux/extern/include"
+	${Matlab_INCLUDE_DIRS}
 	)
 
 
 link_directories(
 	"../lib"
-	"/mnt/SHARED/Matlab_Linux/bin/glnxa64"
+	${Matlab_LIBRARY_DIRS}
 	)
 
 #Can manually add the sources using the set command as follows:

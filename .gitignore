@@ -11,6 +11,8 @@
 
 QCLSIM
 
+1
+build*
 *.o
 *.swp
 *.swo
